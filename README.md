@@ -34,13 +34,16 @@ cd profile_react_despliegue
 npm install react-router-dom react-bootstrap bootstrap react-router-bootstrap
 ```
 
-- react-router-dom: Librería de enrutamiento para aplicaciones React.
+- `react-router-dom`: Librería de enrutamiento para aplicaciones React.
 
-- react-bootstrap: Componentes de interfaz de usuario de Bootstrap diseñados para React.
+- `bootstrap`: Estilos CSS y componentes de Bootstrap para aplicaciones web.
+  
+- `react-bootstrap`: Componentes de interfaz de usuario de Bootstrap diseñados para React.
 
-- bootstrap: Estilos CSS y componentes de Bootstrap para aplicaciones web.
+- `react-router-bootstrap` es una integración entre React Router v6 y React Bootstrap. 
 
-3. Importar Bootstrap en src/index.js:
+1. Importar Bootstrap en src/index.js:
+   
 ```js
 ...
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -310,55 +313,50 @@ export default App;
 ```
 
 
-## Despliegue en GitHub Pages
-1. Instala gh-pages:
+## Despliegue en Netlify
 
-Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando para instalar la herramienta gh-pages, que facilitará el despliegue en GitHub Pages:
+Netlify es una plataforma de automatización moderna para el desarrollo web que permite desplegar sitios y aplicaciones web de manera rápida y sencilla. Ofrece características como despliegue continuo desde repositorios git, funciones sin servidor, y mucho más.
+
+Para continuar es necesario crear una cuenta gratuita en https://www.netlify.com/.
+
+
+1. Instalar Netlify CLI:
+
+Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando para instalar la herramienta netlify-cli, que facilitará el despliegue en GitHub Pages:
 
 ```bash
-npm install gh-pages --save-dev
+npm install netlify-cli -g
 ```
 
-2. Agrega el campo homepage en package.json:
+2. Modificar scripts en package.json:
 
-En tu archivo package.json, agrega un campo homepage con la URL de tu repositorio de GitHub. Debería verse como esto:
-
-```json
-"homepage": "https://nombredeusuario.github.io/nombre-de-repo"
-```
-
-Sustituye nombredeusuario por tu nombre de usuario de GitHub y nombre-de-repo por el nombre de tu repositorio.
-
-3. Modifica scripts en package.json:
-
-En package.json, modifica la sección de scripts para agregar dos nuevos comandos:
+En package.json, modifica la sección de scripts para modificar la variable PUBLIC_URL:
 
 ```json
 "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "build": "PUBLIC_URL= react-scripts build",
     // ...otros comandos...
 }
 ```
 
-Estos comandos le indicarán a gh-pages que primero construya la aplicación antes de desplegarla.
-
-4. Ejecuta el despliegue:
+3. Ejecuta el despliegue:
 
 Ahora puedes ejecutar el comando para desplegar tu aplicación en GitHub Pages:
 
 ```bash
-npm run deploy
+npm run build
+
+netlify deploy
 ```
 
-Esto construirá la aplicación y la desplegará en una rama llamada gh-pages de tu repositorio de GitHub.
+Esto construirá la aplicación y la desplegará.
 
-5. Accede a tu aplicación desplegada:
+4. Accede a tu aplicación desplegada:
 
-Una vez que el proceso de despliegue haya finalizado sin errores, puedes acceder a tu aplicación en la URL https://nombredeusuario.github.io/nombre-de-repo, reemplazando nombredeusuario y nombre-de-repo por tus propios datos.
+Una vez que el proceso de despliegue haya finalizado sin errores, puedes acceder a tu aplicación en la URL que indica en el resultado.
 
-6. Actualiza y comparte:
+5. Actualiza y comparte:
 
-Cada vez que realices cambios en tu aplicación, repite los pasos 3 y 4 para actualizar la versión desplegada en GitHub Pages.
+Cada vez que realices cambios en tu aplicación, repite el paso 3 para actualizar la versión desplegada en Netlify.
 
-¡Eso es todo! Tu aplicación React debería estar ahora desplegada en GitHub Pages y accesible en línea.
+¡Eso es todo! Tu aplicación React debería estar ahora desplegada en Netlify y accesible en línea.
