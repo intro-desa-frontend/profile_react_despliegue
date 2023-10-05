@@ -42,7 +42,7 @@ npm install react-router-dom react-bootstrap bootstrap react-router-bootstrap
 
 - `react-router-bootstrap` es una integración entre React Router v6 y React Bootstrap. 
 
-1. Importar Bootstrap en src/index.js:
+3. Importar Bootstrap en src/App.js:
    
 ```js
 ...
