@@ -348,8 +348,7 @@ npm run build
 
 netlify deploy
 ```
-
-Esto construirá la aplicación y la desplegará.
+Seguir las instrucciones y indicar la carpeta `./build` como fuente para desplegar el sitio. Esto construirá la aplicación y la desplegará.
 
 4. Accede a tu aplicación desplegada:
 
