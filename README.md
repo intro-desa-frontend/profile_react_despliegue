@@ -1,7 +1,7 @@
 # Ejercitación Práctica: Creación de un Perfil de Usuario con React y Bootstrap
 
 **Objetivo General**: 
-Desarrollar una aplicación React que simule una página de perfil de usuario, utilizando múltiples componentes y navegación con React Router DOM. La aplicación debe estar estilizada con Bootstrap y finalmente, se desplegará en GitHub Pages.
+Desarrollar una aplicación React que simule una página de perfil de usuario, utilizando múltiples componentes y navegación con React Router DOM. La aplicación debe estar estilizada con Bootstrap y finalmente, se desplegará en Netlify.
 
 ## Especificaciones:
 
@@ -20,7 +20,7 @@ Desarrollar una aplicación React que simule una página de perfil de usuario, u
    - Utilizar Bootstrap para estilizar la aplicación, asegurándose de que sea responsiva.
 
 ### 4. Despliegue:
-   - La aplicación debe ser desplegada en GitHub Pages.
+   - La aplicación debe ser desplegada en Netlify.
 
 ## Creación y Configuración del Proyecto React
 1. Crear el proyecto:
@@ -322,7 +322,7 @@ Para continuar es necesario crear una cuenta gratuita en https://www.netlify.com
 
 1. Instalar Netlify CLI:
 
-Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando para instalar la herramienta netlify-cli, que facilitará el despliegue en GitHub Pages:
+Abre una terminal en la carpeta raíz de tu proyecto y ejecuta el siguiente comando para instalar la herramienta netlify-cli, que facilitará el despliegue en Netlify:
 
 ```bash
 npm install netlify-cli -g
@@ -330,7 +330,7 @@ npm install netlify-cli -g
 
 2. Modificar scripts en package.json:
 
-En package.json, modifica la sección de scripts para modificar la variable PUBLIC_URL:
+En package.json, modifica la sección de scripts para actualizar la variable PUBLIC_URL:
 
 ```json
 "scripts": {
@@ -341,7 +341,7 @@ En package.json, modifica la sección de scripts para modificar la variable PUBL
 
 3. Ejecuta el despliegue:
 
-Ahora puedes ejecutar el comando para desplegar tu aplicación en GitHub Pages:
+Ahora puedes ejecutar el comando para desplegar tu aplicación en Netlify:
 
 ```bash
 npm run build
